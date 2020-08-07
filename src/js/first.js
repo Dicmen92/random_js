@@ -1,10 +1,14 @@
 let money = 10000,
-income = 4000,
-addExpenses = 2000,
-deposit = 4000;
-const mission = 'Сдать первый урок на УРА',
-period = '06.08.2020 г.';
+mission = 35000,
+deposit = true;
+const income = 'Фриланс',
+addExpenses = 'Интернет, Телефон, Билет на метро',
+period = 7;
 
-alert("Привет мир");
+console.log(typeof income, typeof money, typeof deposit);
+console.log(addExpenses.length);
+console.log('Период равен', period, 'месяцев.', 'Цель заработать', mission, 'рублей');
+console.log(addExpenses.toLowerCase().split(' '));
 
-console.log('Эту запись мы отображаем в Консоли')
+let budgetDay = '20000 рублей / 30';
+console.log(budgetDay);
