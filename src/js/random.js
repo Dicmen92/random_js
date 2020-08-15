@@ -13,24 +13,31 @@ let isNumber = function(n) {
 let randomNumber = Math.round(getRandomArbitrary(1, 100));
 let entNumber = 0;
 
+let nullNumber = function(x) {
+     if (x === null) {     
+     return alert ('Спасибо за игру, удачи!');      
+    }   
+  } 
+
 let getEntNumber = function() {     
      console.log(randomNumber);     
      let getGuessNumber = function() {
-          entNumber = prompt('Угадай число от 1 до 100');         
+          entNumber = prompt('Угадай число от 1 до 100');  
+            nullNumber(entNumber);     
             if (entNumber > randomNumber) {
-            console.log('Загаданное число меньше');
+            alert('Загаданное число меньше');
             getGuessNumber();
             } else if (entNumber < randomNumber) {
-            console.log('Загаданное число больше');
+            alert('Загаданное число больше');
             getGuessNumber();            
             } else if (!isNumber(entNumber)) {
             alert('Введи число!');
             getGuessNumber(); 
             } else {
                alert('Вы угадали число число!');            
-            } 
-     }
-     return getGuessNumber();
+            }             
+     }        
+     return getGuessNumber();       
 };    
 
 getEntNumber();
